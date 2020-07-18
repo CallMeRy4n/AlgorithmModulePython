@@ -6,7 +6,7 @@ Edge = namedtuple('Edge', 'start, end, cost')
 def create_Edge(start, end, cost):
     return Edge(start, end, cost)
 
-class Graph():
+class Dijstra():
     def __init__(self, edges: list):
         is_error = [val for val in edges if len(val) not in [2, 3]]
         if is_error:
