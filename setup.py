@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/CallMeRy4n/AlgirthmRy4nModules",
     packages=[
-        "ry4n_module_algorithm"
+        "src/ry4n_module_algorithm"
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
