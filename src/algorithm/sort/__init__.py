@@ -1,1 +1,1 @@
-from .word_sort import word_sort, dict_word
+from .word_sort import word_sort_by_char, dict_word
