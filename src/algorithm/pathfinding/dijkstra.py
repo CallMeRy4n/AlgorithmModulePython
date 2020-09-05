@@ -8,6 +8,10 @@ def create_Edge(start, end, cost):
 
 class Dijstra():
     def __init__(self, edges: list):
+        '''
+        Parameter:
+            list of edge, edge is a tuple with (start, end, cost)
+        '''
         is_error = [val for val in edges if len(val) not in [2, 3]]
         if is_error:
             raise ValueError("Wrong value: {0}".format(is_error))
@@ -16,7 +20,7 @@ class Dijstra():
     @property
     def node(self):
         return set(
-            sum(([edge.start, edge.end] for edge in self.edges), [])
+            sum( ( [edge.start, edge.end] for edge in self.edges), [] )
         )
         '''
         EX: o = ([1, 2], [3, 4])
@@ -36,7 +40,7 @@ class Dijstra():
 
     def dijstra(self, startNode, endNode):
         '''
-        Returns: 
+        Return: 
             list: shortest path, contain each node
         '''
 
@@ -71,3 +75,7 @@ class Dijstra():
                 output_path.insert(0, current_vertex)
         # Code end
         return output_path
+# Input: [(start, end, cost)]
+# Ex: [("a", "b", 2), ("b", "c", 1), ("a", "c", 3)]
+e = Dijstra([("a", "b", 2), ("b", "c", 1), ("a", "c", 3)])
+print(e.dijstra("a", "c"))
